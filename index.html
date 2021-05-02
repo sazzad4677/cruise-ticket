@@ -18,7 +18,7 @@
     <header class="container">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li onclick="bookingFormShow()"><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a class="active" href="#">Sign Up</a></li>
@@ -33,8 +33,6 @@
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
         </div>
-
-
         <div class="booking-form" id="submit-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group ">
@@ -111,9 +109,8 @@
             <button onclick="bookingFormHide()" class="book-now">Book Now</button>
         </div>
         <div id="success-form">
-            <!-- <img src="./images/success.png" alt="" /> -->
-            <!-- <h3>Your order has been taken successfully</h3>
-            <h3>You have ordered <span id="orderFcTicket">0</span> first class tickets, <span id="orderEcoTicket">0</span> economic tickets. Total price $<span id="orderTotal">0</span>.</h3> -->
+            <img src="./images/success.png" alt="" />
+             <h3>Your order has been taken successfully</h3>
         </div>
 
     <script src="script.js"></script>

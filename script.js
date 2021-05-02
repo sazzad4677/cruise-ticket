@@ -18,7 +18,7 @@ function totalCalculation(){
    const totalPrice = firstClassCount * 150 + economyClassCount * 100;
    document.getElementById('subTotal').innerText = '$' + totalPrice;
 
-   const tax = math.round(totalPrice * 0.1);
+   const tax = Math.round(totalPrice * 0.1);
    document.getElementById('tax-amount').innerText = '$'+ tax;
 
    const grandtotal = totalPrice + tax;
@@ -33,9 +33,25 @@ function getInputValue(ticketClass){
 
 
 function bookingFormHide (){
-    const  submitForm = document.getElementById("submit-form");
+    const firstClassCount = getInputValue('first');
+    const economyClassCount = getInputValue('economy');
+    if (firstClassCount > 0 || economyClassCount> 0) {
+        const  submitForm = document.getElementById("submit-form");
         submitForm.style.display = "none"; 
+
         const successForm = document.getElementById("success-form");
-        successForm.style.display = "block";
+        successForm.style.display = 'block';
+    }
+    if (firstClassCount == 0 && economyClassCount == 0) {
+        alert("Please select at least 1 ticket");
+    }
+}
+
+function bookingFormShow(){
+    const  submitForm = document.getElementById("submit-form");
+    submitForm.style.display = "block"; 
+    
+    const successForm = document.getElementById("success-form");
+    successForm.style.display = 'none';
 }
 

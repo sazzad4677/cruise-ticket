@@ -135,3 +135,20 @@ nav ul li a:hover, a.active{
     background: #3352f2;
     cursor: pointer;
 }
+#success-form{
+    background-color: #fff;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    display: none;
+}
+#success-form img{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#success-form h3 {
+    text-align: center;
+    color: green;
+}
